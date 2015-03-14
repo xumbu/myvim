@@ -1,0 +1,34 @@
+set laststatus=2
+syntax on
+filetype plugin indent on
+set clipboard=unnamed
+
+set nocompatible
+set backupdir=$VIM/vimbackupfiles
+set directory=$VIM/vimbackupfiles
+
+set tabstop=4  
+set shiftwidth=4  
+set softtabstop=4
+set expandtab
+
+if has("gui_running")
+	:start
+    set guifont=Lucida_Console:h10.5:cANSI
+else
+    color darkblue
+endif
+
+set number
+
+vmap <Tab> >
+
+
+let g:EclimCompletionMethod = 'omnifunc'
+
+
+
+"automatic brackets
+"
+inoremap {      {}<Left><Return><Return><Up><Tab>
+
