@@ -1,8 +1,12 @@
+autocmd VimLeave *.cs :YcmCompleter StopServer
+
+
 set laststatus=2
+set backspace=indent,eol,start "normal backspace behavior
 syntax on
 filetype plugin indent on
+set noeb vb t_vb= "" disable bell
 set clipboard=unnamed
-
 set nocompatible
 set backupdir=$VIM/vimbackupfiles
 set directory=$VIM/vimbackupfiles
@@ -25,10 +29,8 @@ vmap <Tab> >
 
 
 let g:EclimCompletionMethod = 'omnifunc'
-
-
-
 "automatic brackets
-"
 inoremap {      {}<Left><Return><Return><Up><Tab>
+
+let g:ycm_auto_stop_csharp_server = 1
 
